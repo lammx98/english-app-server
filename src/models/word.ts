@@ -8,7 +8,7 @@ class WordModel extends Model {
     mean: String | null = null;
     type: String | null = null;
 
-    async create(body: object) : Promise<mongoose.Types.ObjectId>{
+    async Create(body: object) : Promise<mongoose.Types.ObjectId>{
         var model = this.CreateInstance(body);
         var schema = model.CreateSchema(new Word());
         await schema.save();
