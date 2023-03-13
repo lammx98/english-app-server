@@ -4,10 +4,11 @@ import mongoose from 'mongoose'
 import wordrouter from './routers/word.routers'
 import learnrouter from './routers/learn.routers'
 const bodyParser = require('body-parser')
-require('dotenv').config()
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 /** env variables */
 const DATABASE_CONNECTION = process.env.DATABASE_CONNECTION as string
 const PORT = parseInt(process.env.PORT as string)
+const HOST = process.env.HOST as string
 /** import components */
 
 /** global settings */
@@ -33,5 +34,8 @@ app.get('/test', (req: express.Request, res: express.Response) => {
 app.use('/api/word', wordrouter)
 app.use('/api/learn', learnrouter)
 
-app.listen(PORT, () => console.log(`app running on ${PORT}`))
-//app.listen(PORT, 'localhost', () => console.log(`app running on http://localhost:${PORT}`))
+/** run app */
+if (HOST)
+    app.listen(PORT, HOST, () => console.log(`app running on http://${HOST}:${PORT}`))
+else
+    app.listen(PORT, () => console.log(`app running on http://localhost:${PORT}`))

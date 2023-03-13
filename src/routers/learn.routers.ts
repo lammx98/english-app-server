@@ -9,4 +9,5 @@ router.get('/learn-word',async (req, res) => {
     res.send(data)
 })
 
+
 export default router

@@ -23,5 +23,7 @@ async function GetWord() : Promise<Result<Array<WordModel>>> {
         return (new Result<Array<WordModel>>()).Error(String(error))
     }
 }
-
+async function AddLearned(_id: ObjectId, userid: ObjectId) {
+    
+}
 export { GetWord }
