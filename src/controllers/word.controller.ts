@@ -6,7 +6,7 @@ import { Result } from "../models/result";
 const model = new WordModel();
 
 async function Create(body: object) : Promise<mongoose.Types.ObjectId> {
-    return await model.create(body);
+    return await model.Create(body);
 }
 
 async function Update(_id: mongoose.Types.ObjectId, model: IWord) : Promise<String> {

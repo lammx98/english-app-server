@@ -1,4 +1,4 @@
-import mongoose, { Document } from "mongoose";
+import mongoose from "mongoose";
 import { ISchema } from './index'
 
 interface IWord extends ISchema {
