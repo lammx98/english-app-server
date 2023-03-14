@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "SET NODE_ENV=development&& npx nodemon",
+    "start:mac": "export NODE_ENV=mac &&npx nodemon",
     "start:prod": "SET NODE_ENV=production&& npm run build && node build/index.js",
     "build": "rimraf ./build && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",

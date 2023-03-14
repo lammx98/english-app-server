@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 import wordrouter from './routers/word.routers'
 import learnrouter from './routers/learn.routers'
 const bodyParser = require('body-parser')
+console.log(process.env.NODE_ENV)
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 /** env variables */
 const DATABASE_CONNECTION = process.env.DATABASE_CONNECTION as string

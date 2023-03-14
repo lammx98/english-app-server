@@ -23,7 +23,7 @@ class WordModel extends Model {
     }
     async GetRandom(exceptIds: Array<ObjectId> | null) : Promise<WordModel | null> {
         var count = await Word.count().lean();
-        var random = Math.floor(Math.random() * count);
+        var random = Math.floor(Math.random() * (count - (exceptIds ? exceptIds?.length : 0)));
         var result = await Word.findOne({_id: { $nin: exceptIds }}).skip(random).exec();
         if (result) {
             return (new WordModel()).SchemaToModel(result);

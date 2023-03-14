@@ -12,7 +12,7 @@
             "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": ["${workspaceFolder}/build/**/*.js"],
             "env": {
-                "NODE_ENV": "development"
+                "NODE_ENV": "mac"
             }
         }
     ]
