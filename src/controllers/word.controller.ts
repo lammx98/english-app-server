@@ -1,12 +1,20 @@
-import mongoose from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
 import {IWord, Word} from '../schemas/word.schema'
 import WordModel from '../models/word'
 import { Result } from "../models/result";
 
 const model = new WordModel();
 
-async function Create(body: object) : Promise<mongoose.Types.ObjectId> {
-    return await model.Create(body);
+async function Create(body: object) : Promise<Result<ObjectId>> {
+    try {
+        var data = await model.Create(body);
+        if (data != null) {
+            return (new Result<ObjectId>()).OK(data)
+        }
+        return (new Result<ObjectId>()).DataEmpty()
+    } catch (error) {
+        return (new Result<ObjectId>()).Error(String(error))
+    }
 }
 
 async function Update(_id: mongoose.Types.ObjectId, model: IWord) : Promise<String> {
@@ -21,7 +29,7 @@ async function Update(_id: mongoose.Types.ObjectId, model: IWord) : Promise<Stri
     return "item not found";
 }
 
-async function GetById(_id: mongoose.Types.ObjectId) : Promise<Result<WordModel>> {
+async function GetById(_id: ObjectId) : Promise<Result<WordModel>> {
     try {
         var data = await model.GetById(_id);
         if (data != null) {

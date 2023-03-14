@@ -8,13 +8,13 @@ class WordModel extends Model {
     mean: String | null = null;
     type: String | null = null;
 
-    async Create(body: object) : Promise<mongoose.Types.ObjectId>{
+    async Create(body: object) : Promise<ObjectId>{
         var model = this.CreateInstance(body);
         var schema = model.CreateSchema(new Word());
         await schema.save();
         return schema._id;
     }
-    async GetById(_id: mongoose.Types.ObjectId) : Promise<WordModel | null> {
+    async GetById(_id: ObjectId) : Promise<WordModel | null> {
         var result = await Word.findById(_id).exec();
         if (result) {
             return (new WordModel()).SchemaToModel(result);
