@@ -3,6 +3,8 @@ import express from 'express';
 import mongoose from 'mongoose'
 import wordrouter from './routers/word.routers'
 import learnrouter from './routers/learn.routers'
+import adminrouter from './routers/admin.routers'
+import multer from 'multer'
 const bodyParser = require('body-parser')
 console.log(process.env.NODE_ENV)
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
@@ -25,6 +27,7 @@ mongoose.connect(DATABASE_CONNECTION)
 
 mongoose.connection.on('error' , (error) => { console.log(error); })
 mongoose.connection.once('connected', () => { console.log(`Connected to ${DATABASE_CONNECTION}`); })
+/** file storage settings */
 
 /** routers config */
 app.get('/test', (req: express.Request, res: express.Response) => {
@@ -34,6 +37,7 @@ app.get('/test', (req: express.Request, res: express.Response) => {
 
 app.use('/api/word', wordrouter)
 app.use('/api/learn', learnrouter)
+app.use('/api/admin', adminrouter)
 
 /** run app */
 if (HOST)

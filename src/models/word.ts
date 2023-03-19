@@ -1,4 +1,5 @@
 import mongoose, { ObjectId } from "mongoose";
+import { Image } from "src/schemas/image.schema";
 import {Model} from ".";
 import { IWord, Word } from "../schemas/word.schema"
 import { Result } from "./result";
@@ -7,6 +8,9 @@ class WordModel extends Model {
     word: String | null = null;
     mean: String | null = null;
     type: String | null = null;
+    pronounce: String | null = null;
+    createdBy: ObjectId | null = null;
+    image: String | null = null;
 
     async Create(body: object) : Promise<ObjectId>{
         var model = this.CreateInstance(body);
@@ -20,6 +24,17 @@ class WordModel extends Model {
             return (new WordModel()).SchemaToModel(result);
         }
         return null;
+    }
+    async GetByIdWithImage(_id: ObjectId) : Promise<WordModel | null> {
+        var data = await this.GetById(_id)
+        if (data) {
+            var image = await Image.findOne({wordid: data._id}).exec()
+            if (image) {
+                data.image = image.content;
+            }
+            return data;
+        }
+        return null
     }
     async GetRandom(exceptIds: Array<ObjectId> | null) : Promise<WordModel | null> {
         var count = await Word.count().lean();

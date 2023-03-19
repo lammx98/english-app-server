@@ -1,6 +1,7 @@
-import { ObjectId } from "mongoose";
+import { ObjectId, Schema } from "mongoose";
 import { ILearned, Learned } from "../schemas/learned.schema";
 import { Model } from ".";
+import moment from "moment";
 
 
 
@@ -8,9 +9,11 @@ class LearnedModel extends Model {
     wordid: ObjectId | null = null
     userid: ObjectId | null = null
     level: Number | null = null
+    lastLearned: Date | null = null
 
     async Create(body: Object) : Promise<ObjectId> {
         var model = this.CreateInstance(body);
+        model.lastLearned = new Date()
         var schema = model.CreateSchema(new Learned())
         await schema.save();
         return schema._id;
