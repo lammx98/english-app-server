@@ -1,0 +1,118 @@
+33. Architecture: Kiến trúc
+
+
+34. Agriculture: Nông nghiệp
+
+
+35. Veterinary Medicine: Thú y
+
+
+36. Orthodontics: Răng - hàm - mặt
+
+
+37. Medicine: Y dược
+
+
+38. Public Health: Y tế Cộng đồng
+
+
+39. Nursing: Y tá
+
+
+40. Pharmacy: Dược phẩm
+
+
+41. Dentistry: Nha Khoa
+
+
+42. Hotel Management: Quản trị Khách sạn
+
+
+43. Pedagogy: Giáo dục học
+
+
+44. Pedagogical Management: Quản lý Giáo dục
+
+
+45. Primary Education: Giáo dục Tiểu học
+
+
+46. Early Childhood Education: Giáo dục Mầm non
+
+
+47. Mathematics Teacher Education: Sư phạm Toán
+
+
+48. Geography Teacher Education: Sư phạm Địa
+
+
+49. Physics Teacher Education: Sư phạm Lý
+
+
+50. Linguistics and Literature Teacher Education: Sư phạm Văn
+
+
+51. Biology Teacher Education: Sư phạm Sinh
+
+
+52. Politics: Chính trị học
+
+
+53. Anthropology: Nhân học
+
+
+54. International Studies: Quốc tế học
+
+
+55. Psychology: Tâm lý học
+
+
+56. Vietnamese Studies: Việt Nam học
+
+
+57. Industrial Design: Thiết kế Công nghiệp
+
+
+58. Law: Luật
+
+
+59. Constitutional and Administrative Law: Luật hiến pháp và luật hành chính
+
+
+60. Criminal Procedure Law: Luật Hình sự
+
+
+61. Civil Procedure Law: Luật Dân sự
+
+
+62. International Law: Luật Quốc tế
+
+
+63. Economic Law: Luật Kinh tế
+
+
+64. Civil Engineering: Kỹ sư Xây dựng Dân dụng
+
+
+65. Electrical Engineering: Kỹ sư điện
+
+
+66. Food Science: Khoa học Thực phẩm
+
+
+67. Transportation Engineering and Technology: Công nghệ Kỹ thuật Giao thông
+
+
+68. Materials Science and Engineering: Khoa học và công nghệ Vật Liệu
+
+
+69. Automotive Engineering Technology: Công nghệ Kỹ thuật ô tô
+
+
+70. Environmental Engineering: Công nghệ Môi trường
+
+
+71. Mechanical Engineering Technology: Công nghệ Kỹ thuật Cơ khí
+
+
+72. Chemical Engineering: Công nghiệp hóa chất

@@ -37,6 +37,11 @@ router.get('/create-json', async (req, res) => {
                     var wm = new WordModel();
                     wm.word = info[0].trim()
                     wm.mean = info[info.length - 1].trim()
+                    
+                    /** check word exist */
+                    var wordExisted = await Word.findOne({word: wm.word, mean: wm.mean }).lean();
+                    if (wordExisted != null) return;
+
                     wm.topicid = topicId
                     var schema = wm.CreateSchema(new Word())
                     await schema.save()

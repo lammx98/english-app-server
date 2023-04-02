@@ -1,0 +1,148 @@
+118. blackboard: bảng đen
+
+
+119. attendance: điểm chuyên cần
+
+
+120. course: khóa học
+
+
+121. projector: máy chiếu
+
+
+122. subject: môn học
+
+
+123. chalk: phấn viết bảng
+
+
+124. semester: kì học
+
+
+125. timetable: thời khóa biểu
+
+
+126. homework: bài tập về nhà
+
+
+127. qualification: bằng cấp
+
+
+128. certificate: chứng chỉ
+
+
+129. notebook: vở ghi
+
+
+130. textbook: sách giáo khoa
+
+
+131. exercise book: vở bài tập
+
+
+132. test paper: giấy kiểm tra
+
+
+133. sound system: hệ thống âm thanh 
+
+
+134. pencil case: hộp bút
+
+
+135. paint: màu vẽ
+
+
+136. protractor: thước đo góc
+
+
+137. marker: bút đánh dấu, bút viết bảng
+
+
+138. pencil: bút chì
+
+
+139. fountain pen: bút mực
+
+
+140. ballpoint pen: bút bi
+
+
+141. correction pen: bút xóa
+
+
+142. crayon: sáp màu
+
+
+143. eraser: tẩy chì
+
+
+144. stapler: cái dập ghim
+
+
+145. coloured pencil: bút chì màu
+
+
+146. staple: ghim
+
+
+147. ruler: thước kẻ
+
+
+148. set square: thước vuông
+
+
+149. push pin: đinh ghim
+
+
+150. paper clips: kẹp giấy
+
+
+151. scissors: kéo
+
+
+152. sticky notes: giấy nhớ
+
+
+153. binder clip: kẹp bướm
+
+
+154. lanyard: dây đeo thẻ
+
+
+155. calculator: máy tính cầm tay
+
+
+156. folder: bìa kẹp tài liệu
+
+
+157. pencil sharpener: gọt bút chì
+
+
+158. tape: băng dính
+
+
+159. tape dispenser: dụng cụ cắt băng dính
+
+
+160. name tag: nhãn vở
+
+
+161. swivel chair: ghế xoay
+
+
+162. waste basket: thùng rác
+
+
+163. glue: keo dán giấy
+
+
+164. school bag: balo
+
+
+165. map: bản đồ
+
+
+166. globe: quả địa cầu
+
+
+167. magnifying glass: kính lúp

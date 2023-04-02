@@ -1,0 +1,61 @@
+73. principal: hiệu trưởng
+
+
+74. vice principal: hiệu phó
+
+
+75. teacher: giáo viên
+
+
+76. form teacher: giáo viên chủ nhiệm
+
+
+77. lecturer: giảng viên
+
+
+78. teaching assistant: trợ giảng
+
+
+79. tutor: gia sư
+
+
+80. pupil: học sinh
+
+
+81. student: sinh viên
+
+
+82. janitor: lao công
+
+
+83. school security guard: bảo vệ 
+
+
+84. class monitor: lớp trưởng
+
+
+85. vice-monitor: lớp phó
+
+
+86. secretary: bí thư
+
+
+87. freshman: Sinh viên năm nhất
+
+
+88. sophomore: Sinh viên năm hai
+
+
+89. third-year student: Sinh viên năm ba
+
+
+90. final year student: Sinh viên năm cuối
+
+
+91. researcher: nghiên cứu sinh
+
+
+92. master student: sinh viên cao học
+
+
+93. PhD student: nghiên cứu sinh bằng tiến sĩ
