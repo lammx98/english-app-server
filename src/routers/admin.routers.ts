@@ -26,15 +26,17 @@ router.get('/create-json', async (req, res) => {
         var folder = "/Users/xuanlam98/Works/Source/english-app/server-app/data";
         var resarr = [String]
         await fs.readdirSync(folder).forEach(async file => {
-            var topicId = await _adminController.CreateTopic(path.basename(file))
+            var topicId = await _adminController.GetOrCreateTopic(path.basename(file))
             var fileContent = await fs.readFileSync(path.join(folder, file), 'utf-8')
             var arr = fileContent.split('\n')
-            arr.forEach(async str => {
+            await arr.forEach(async str => {
                 try {
-                    var info = str.split(/[.:]+/)
+                    if (str.length < 2) return;
+                    str = str.replace(/[0123456789.]+/, '')
+                    var info = str.split(/[(/:]+/)
                     var wm = new WordModel();
-                    wm.word = info[1].trim()
-                    wm.mean = info[2].trim()
+                    wm.word = info[0].trim()
+                    wm.mean = info[info.length - 1].trim()
                     wm.topicid = topicId
                     var schema = wm.CreateSchema(new Word())
                     await schema.save()
