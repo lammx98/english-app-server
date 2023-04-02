@@ -1,5 +1,5 @@
 import mongoose, { ObjectId } from "mongoose";
-import { Image } from "src/schemas/image.schema";
+import { Image } from "../schemas/image.schema";
 import {Model} from ".";
 import { IWord, Word } from "../schemas/word.schema"
 import { Result } from "./result";
@@ -11,6 +11,7 @@ class WordModel extends Model {
     pronounce: String | null = null;
     createdBy: ObjectId | null = null;
     image: String | null = null;
+    topicid: ObjectId | null = null;
 
     async Create(body: object) : Promise<ObjectId>{
         var model = this.CreateInstance(body);
@@ -25,7 +26,7 @@ class WordModel extends Model {
         }
         return null;
     }
-    async GetByIdWithImage(_id: ObjectId) : Promise<WordModel | null> {
+    async GetByIdWithoutImage(_id: ObjectId) : Promise<WordModel | null> {
         var data = await this.GetById(_id)
         if (data) {
             var image = await Image.findOne({wordid: data._id}).exec()

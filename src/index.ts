@@ -4,6 +4,8 @@ import mongoose from 'mongoose'
 import wordrouter from './routers/word.routers'
 import learnrouter from './routers/learn.routers'
 import adminrouter from './routers/admin.routers'
+import gamerouter from './routers/game.routers'
+import topicrouter from './routers/topic.routers'
 import multer from 'multer'
 const bodyParser = require('body-parser')
 console.log(process.env.NODE_ENV)
@@ -38,6 +40,8 @@ app.get('/test', (req: express.Request, res: express.Response) => {
 app.use('/api/word', wordrouter)
 app.use('/api/learn', learnrouter)
 app.use('/api/admin', adminrouter)
+app.use('/api/game', gamerouter)
+app.use('/api/topic', topicrouter)
 
 /** run app */
 if (HOST)

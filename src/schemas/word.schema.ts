@@ -6,7 +6,9 @@ interface IWord extends ISchema {
     mean: String,
     type: String,
     pronounce: String,
-    createdBy: ObjectId
+    image: string,
+    createdBy: ObjectId,
+    topicid: ObjectId
 }
 
 const wordSchema = new mongoose.Schema<IWord>({
@@ -14,7 +16,9 @@ const wordSchema = new mongoose.Schema<IWord>({
     mean: {type: String, required: true},
     type: {type: String, required: false},
     pronounce: {type: String, required: false},
-    createdBy: {type: Schema.Types.ObjectId, required: false}
+    image: {type: String, required: false},
+    createdBy: {type: Schema.Types.ObjectId, required: false},
+    topicid: {type: Schema.Types.ObjectId, required: false}
 })
 
 const Word = mongoose.model<IWord>('word', wordSchema)

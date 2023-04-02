@@ -1,0 +1,23 @@
+1. School: Trường học 
+
+2. Nursery school: Trường mẫu giáo
+
+3. Primary school: Trường tiểu học 
+
+4. Secondary school: Trường trung học 
+
+5. Public school: Trường Công lập
+
+6. Private school: Trường tư nhân 
+
+7. Boarding school: Trường nội trú 
+
+8. Day school: Trường bán trú
+
+9. College: Trường cao đẳng
+
+10. Technical college: Trường cao đẳng kỹ thuật 
+
+11. University: Trường đại học 
+
+12. Art college: Trường cao đẳng nghệ thuật

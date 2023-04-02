@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
+import { Topic } from "../schemas/topic.schema";
 import { Result } from "./../models/result";
 import WordModel from "./../models/word";
 import { Word } from "./../schemas/word.schema";
@@ -7,7 +8,7 @@ const model = new WordModel()
 
 async function ImportData(datas: [object]) : Promise<Result<Array<String>>>{
     var results = new Array<String>()
-    datas.forEach(async wm => {
+    await Promise.all(datas.map(async wm => {
         try {
             var data = await model.Create(wm);
             if (data) 
@@ -17,12 +18,19 @@ async function ImportData(datas: [object]) : Promise<Result<Array<String>>>{
         } catch (error) {
             console.log(error)   
         }
-    });
+    }));
     return (new Result<Array<String>>()).OK(results)
 }
 
 async function ImportDataFromFile(fileContent: any) {
     
 }
+async function CreateTopic(key: string) : Promise<ObjectId> {
+    var schema = new Topic();
+    schema.title = key.replace('.txt', '')
+    await schema.save()
+    return schema._id;
+}
 
-export { ImportData, ImportDataFromFile }
+
+export { ImportData, ImportDataFromFile, CreateTopic }

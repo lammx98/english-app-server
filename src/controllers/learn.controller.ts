@@ -1,5 +1,5 @@
 import mongoose, { ObjectId } from "mongoose";
-import { ILearned } from "src/schemas/learned.schema";
+import { ILearned } from "../schemas/learned.schema";
 import LearnedModel from "../models/learned";
 import { Result } from "../models/result";
 import WordModel from "../models/word";
@@ -7,19 +7,12 @@ import WordModel from "../models/word";
 const wordModel = new WordModel();
 const learnModel = new LearnedModel();
 
-async function GetWord(): Promise<Result<Array<WordModel>>> {
+
+async function GetLearnWord() {
     try {
-        var exceptIds = new Array<ObjectId>();
-        var arrData = new Array<WordModel>();
-        for (let index = 0; index < 4; index++) {
-            var data = await wordModel.GetRandom(exceptIds);
-            if (data != null) {
-                arrData.push(data);
-                exceptIds.push(data._id as ObjectId);
-            }
-        }
-        if (arrData.length > 0) {
-            return (new Result<Array<WordModel>>).OK(arrData);
+        var data = await wordModel.GetRandom([]);
+        if (data != null) {
+            return (new Result<WordModel>()).OK(data)
         }
         return (new Result<Array<WordModel>>()).DataEmpty()
     } catch (error) {
@@ -43,4 +36,4 @@ async function Update(body: object) : Promise<Result<ILearned>> {
         return (new Result<ILearned>()).Error(String(error))
     }
 }
-export { GetWord, Add, Update }
+export { GetLearnWord, Add, Update }

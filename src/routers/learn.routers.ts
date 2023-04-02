@@ -5,7 +5,7 @@ import * as _learnController from '../controllers/learn.controller'
 const router = express.Router()
 
 router.get('/learn-word',async (req, res) => {
-    var data = await _learnController.GetWord();
+    var data = await _learnController.GetLearnWord();
     res.send(data)
 })
 router.post('/add-learned', async (req, res) => {
